@@ -3,9 +3,9 @@ spring:
     name: order
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    username: root
-    password: Pa55Word
-    url: jdbc:mysql://127.0.0.1:3306/samples_order?characterEncoding=utf-8&useSSL=false&serverTimezone=GMT
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:yhl1qaz2wsx}
+    url: jdbc:mysql://${MYSQL_HOST:192.168.0.135}:${MYSQL_PORT:3306}/samples_order?characterEncoding=utf-8&useSSL=false&serverTimezone=GMT
   zipkin:
     base-url: http://${ZIPKIN_HOST:127.0.0.1}:${ZIPKIN_PORT:9411}
     discovery-client-enabled: false
@@ -21,15 +21,15 @@ spring:
   cloud:
     nacos:
       config:
-        file-extension: yaml
-        server-addr: ${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
-        username: nacos
-        password: nacos
+        file-extension: yml
+        server-addr: ${NACOS_SERVER_ADDR:192.168.0.135:8848}
+        username: ${NACOS_USERNAME:nacos}
+        password: ${NACOS_PASSWORD:nacos}
         name: test
       discovery:
-        server-addr: ${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
-        username: nacos
-        password: nacos
+        server-addr: ${NACOS_SERVER_ADDR:192.168.0.135:8848}
+        username: ${NACOS_USERNAME:nacos}
+        password: ${NACOS_PASSWORD:nacos}
 #        metadata:
 #          - env: prod
     sentinel:

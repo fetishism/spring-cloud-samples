@@ -10,7 +10,7 @@
     </parent>
     <artifactId>samples-admin</artifactId>
     <packaging>jar</packaging>
-    <name>samples-admin</name>
+    <name>Samples::admin</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -152,6 +152,7 @@
                 <executions>
                     <execution>
                         <id>default</id>
+                        <phase>deploy</phase>
                         <goals>
                             <goal>build</goal>
                             <goal>push</goal>

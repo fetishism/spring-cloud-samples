@@ -23,18 +23,18 @@ spring:
 
     nacos:
       config:
-        file-extension: yaml
-        server-addr: ${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
-        username: nacos
-        password: nacos
+        file-extension: yml
+        server-addr: ${NACOS_SERVER_ADDR:192.168.0.135:8848}
+        username: ${NACOS_USERNAME:nacos}
+        password: ${NACOS_PASSWORD:nacos}
       discovery:
-        server-addr: ${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
-        username: nacos
-        password: nacos
+        server-addr: ${NACOS_SERVER_ADDR:192.168.0.135:8848}
+        username: ${NACOS_USERNAME:nacos}
+        password: ${NACOS_PASSWORD:nacos}
 
     sentinel:
       datasource.ds1.nacos:
-        serverAddr: ${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
+        serverAddr: ${NACOS_SERVER_ADDR:192.168.0.135:8848}
         dataId: gateway-api
         ruleType: gw-api-group
       transport:

@@ -9,7 +9,7 @@
         <relativePath>..</relativePath>
     </parent>
     <artifactId>samples-zuul</artifactId>
-    <name>samples-zuul</name>
+    <name>Samples::zuul</name>
     <description>网关服务(Netflix Zuul)</description>
 
     <dependencies>
@@ -34,16 +34,16 @@
             <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <artifactId>guava</artifactId>-->
-<!--                    <groupId>com.google.guava</groupId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+        <!--            <exclusions>-->
+        <!--                <exclusion>-->
+        <!--                    <artifactId>guava</artifactId>-->
+        <!--                    <groupId>com.google.guava</groupId>-->
+        <!--                </exclusion>-->
+        <!--            </exclusions>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -234,6 +234,7 @@
                 <executions>
                     <execution>
                         <id>default</id>
+                        <phase>deploy</phase>
                         <goals>
                             <goal>build</goal>
                             <goal>push</goal>

@@ -9,7 +9,7 @@
         <relativePath>..</relativePath>
     </parent>
     <artifactId>samples-core</artifactId>
-    <name>samples-core</name>
+    <name>Samples::core</name>
     <description>核心模块</description>
     <packaging>jar</packaging>
 

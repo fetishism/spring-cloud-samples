@@ -9,7 +9,7 @@
     </parent>
     <groupId>com.upcwangying.cloud.samples.user</groupId>
     <artifactId>user-client</artifactId>
-    <name>user-client</name>
+    <name>User::Client</name>
     <description>用户模块API, 供其他模块调用</description>
 
     <dependencies>
@@ -99,7 +99,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.5</version>
                 <!--<configuration>-->
-                    <!--<skipTests>true</skipTests>-->
+                <!--<skipTests>true</skipTests>-->
                 <!--</configuration>-->
             </plugin>
         </plugins>

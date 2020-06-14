@@ -11,6 +11,69 @@ dubbo:
       server: netty
   registry:
     #   The Spring Cloud Dubbo's registry extension
-    address: spring-cloud://localhost
+    address: nacos://${NACOS_SERVER_ADDR:192.168.0.135:8848}
 #   The traditional Dubbo's registry
 #   address: zookeeper://127.0.0.1:2181
+
+spring:
+  application:
+    name: user
+  cloud:
+      discovery:
+        server-addr: ${NACOS_SERVER_ADDR:192.168.0.135:8848}
+        username: ${NACOS_USERNAME:nacos}
+        password: ${NACOS_PASSWORD:nacos}
+        namespace: ${NACOS_DISCOVERY_NAMESPACE:dev}
+  zipkin:
+    anabled: false
+    base-url: http://${ZIPKIN_HOST:192.168.88.87}:${ZIPKIN_PORT:9411}
+    discovery-client-enabled: false
+  sleuth:
+    sampler:
+      probability: 1
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:yhl1qaz2wsx}
+    url: jdbc:mysql://${MYSQL_HOST:192.168.0.135}:${MYSQL_PORT:3306}/sam_user?characterEncoding=utf-8&useSSL=false&serverTimezone=GMT
+#  boot:
+#    admin:
+#      client:
+#        url: http://${ADMIN_HOST:127.0.0.1}:${ADMIN_PORT:9093}
+#        username: ${ADMIN_USERNAME:admin}
+#        password: ${ADMIN_PASSWORD:admin}
+  # 在 Spring Boot 中, 当用户访问了一个不存在的链接时, Spring 默认会将页面重定向到 **/error** 上, 而不会抛出异常.
+  # 既然如此, 那我们就告诉 Spring Boot, 当出现 404 错误时, 抛出一个异常即可. 在 application.properties 中添加两个配置:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+
+#eureka:
+#  client:
+#    security:
+#      basic:
+#        user: ${EUREKA_BASIC_USER:admin}
+#        password: ${EUREKA_BASIC_PASSWORD:admin}
+#    service-url:
+#      defaultZone: http://${eureka.client.security.basic.user}:${eureka.client.security.basic.password}@${EUREKA_SERVER_HOST:127.0.0.1}:${EUREKA_SERVER_PORT:8762}/eureka/
+#  instance:
+#    metadata-map:
+#      host-mark: running-host
+
+server:
+  port: ${SERVER_PORT:9095}
+
+logging:
+  level:
+    org.springframework.cloud.openfeign: debug
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+swagger:
+  authorization:
+    key-name: 'Authorization'

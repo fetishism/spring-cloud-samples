@@ -9,7 +9,7 @@
         <relativePath>..</relativePath>
     </parent>
     <artifactId>samples-mdm</artifactId>
-    <name>samples-mdm</name>
+    <name>Samples::mdm</name>
     <description>主数据模块</description>
     <packaging>pom</packaging>
 
@@ -23,8 +23,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Finchley.SR4</spring-cloud.version>
-        <spring-cloud-alibaba.version>2.0.2.RELEASE</spring-cloud-alibaba.version>
+        <spring-cloud.version>Greenwich.SR6</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
         <spring-boot-admin.version>2.0.5</spring-boot-admin.version>
         <swagger-spring.version>1.9.0.RELEASE</swagger-spring.version>
         <commons-collections.version>3.2.2</commons-collections.version>

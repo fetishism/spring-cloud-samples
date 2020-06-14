@@ -5,7 +5,7 @@
 ## 项目依赖
 
 - Spring Boot (2.0.9.RELEASE)
-- Spring Cloud (Finchley.SR4)
+- Spring Cloud (Greenwich.SR6)
 - Spring Cloud Alibaba (2.0.2.RELEASE)
 
 ## Seata

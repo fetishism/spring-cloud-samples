@@ -9,13 +9,13 @@
         <relativePath>..</relativePath>
     </parent>
     <artifactId>samples-gateway</artifactId>
-    <name>samples-gateway</name>
+    <name>Samples::gateway</name>
     <description>网关服务(Spring Cloud Gateway)</description>
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Finchley.SR4</spring-cloud.version>
-        <spring-cloud-alibaba.version>2.0.2.RELEASE</spring-cloud-alibaba.version>
+        <spring-cloud.version>Greenwich.SR6</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
         <docker.image.prefix>registry.cn-qingdao.aliyuncs.com/upcwangying</docker.image.prefix>
     </properties>
 
@@ -55,10 +55,10 @@
             <artifactId>sentinel-transport-simple-http</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -165,6 +165,7 @@
                 <executions>
                     <execution>
                         <id>default</id>
+                        <phase>deploy</phase>
                         <goals>
                             <goal>build</goal>
                             <goal>push</goal>

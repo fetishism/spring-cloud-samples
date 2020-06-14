@@ -9,12 +9,12 @@
         <relativePath>..</relativePath>
     </parent>
     <artifactId>samples-hystrix-dashboard</artifactId>
-    <name>samples-hystrix-dashboard</name>
+    <name>Samples::hystrix-dashboard</name>
     <description>Hystrix dashboard</description>
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Finchley.SR4</spring-cloud.version>
+        <spring-cloud.version>Greenwich.SR6</spring-cloud.version>
         <dockerfile-maven.version>1.4.10</dockerfile-maven.version>
         <docker.image.prefix>registry.cn-qingdao.aliyuncs.com/upcwangying</docker.image.prefix>
     </properties>
@@ -99,6 +99,7 @@
                 <executions>
                     <execution>
                         <id>default</id>
+                        <phase>deploy</phase>
                         <goals>
                             <goal>build</goal>
                             <goal>push</goal>

@@ -13,4 +13,4 @@ dubbo:
   #      server: netty
   registry:
     #   The Spring Cloud Dubbo's registry extension
-    address: nacos://${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}/?username=nacos&password=nacos
+    address: nacos://${NACOS_SERVER_ADDR:192.168.0.135:8848}/?username=nacos&password=nacos
