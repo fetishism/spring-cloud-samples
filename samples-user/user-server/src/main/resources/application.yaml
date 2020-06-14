@@ -11,8 +11,11 @@ dubbo:
       server: netty
   registry:
     #   The Spring Cloud Dubbo's registry extension
-    address: nacos://${NACOS_SERVER_ADDR:192.168.0.135:8848}
-#   The traditional Dubbo's registry
+    address: nacos://192.168.0.135:8848
+#    address: nacos://${NACOS_SERVER_ADDR:192.168.0.135:8848}
+  cloud:
+    subscribed-services:
+    #   The traditional Dubbo's registry
 #   address: zookeeper://127.0.0.1:2181
 
 spring:
@@ -20,10 +23,14 @@ spring:
     name: user
   cloud:
       discovery:
-        server-addr: ${NACOS_SERVER_ADDR:192.168.0.135:8848}
-        username: ${NACOS_USERNAME:nacos}
-        password: ${NACOS_PASSWORD:nacos}
-        namespace: ${NACOS_DISCOVERY_NAMESPACE:dev}
+        server-addr: 192.168.0.135:8848
+        username: nacos
+        password: nacos
+        namespace: dev
+#        server-addr: ${NACOS_SERVER_ADDR:192.168.0.135:8848}
+#        username: ${NACOS_USERNAME:nacos}
+#        password: ${NACOS_PASSWORD:nacos}
+#        namespace: ${NACOS_DISCOVERY_NAMESPACE:dev}
   zipkin:
     anabled: false
     base-url: http://${ZIPKIN_HOST:192.168.88.87}:${ZIPKIN_PORT:9411}
@@ -31,11 +38,44 @@ spring:
   sleuth:
     sampler:
       probability: 1
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: deferred
   datasource:
+    type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    username: ${MYSQL_USERNAME:root}
-    password: ${MYSQL_PASSWORD:yhl1qaz2wsx}
-    url: jdbc:mysql://${MYSQL_HOST:192.168.0.135}:${MYSQL_PORT:3306}/sam_user?characterEncoding=utf-8&useSSL=false&serverTimezone=GMT
+    url: jdbc:mysql://192.168.0.135:3306/sam_user?characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: yhl1qaz2wsx
+#    username: ${MYSQL_USERNAME:root}
+#    password: ${MYSQL_PASSWORD:yhl1qaz2wsx}
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: MYSQL
+    show-sql: true
+    properties:
+      # hibernate.jdbc.time_zone: UTC
+      hibernate.id.new_generator_mappings: true
+      hibernate.connection.provider_disables_autocommit: true
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: false
+
 #  boot:
 #    admin:
 #      client:
