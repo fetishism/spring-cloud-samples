@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ascrud.cloud.samples</groupId>
+        <artifactId>samples-parent</artifactId>
+        <version>0.2.0</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+    <artifactId>samples-modules</artifactId>
+    <name>Samples::User</name>
+    <description>用户模块</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>samples-oss</module>
+        <module>samples-user</module>
+        <module>samples-product</module>
+        <module>samples-order</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Greenwich.SR6</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
+        <spring-boot-admin.version>2.0.5</spring-boot-admin.version>
+        <swagger-spring.version>1.9.0.RELEASE</swagger-spring.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
+        <grpc.version>1.29.0</grpc.version><!-- CURRENT_GRPC_VERSION -->
+        <grpc-spring-boot-starter.version>3.2.2</grpc-spring-boot-starter.version>
+
+        <dockerfile-maven.version>1.4.10</dockerfile-maven.version>
+        <docker.image.prefix>registry.cn-qingdao.aliyuncs.com/ascrud</docker.image.prefix>
+    </properties>
+
+</project>

@@ -3,11 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.upcwangying.cloud.samples</groupId>
+        <groupId>com.ascrud.cloud.samples</groupId>
         <artifactId>samples-data-process</artifactId>
         <version>0.2.0</version>
     </parent>
-    <groupId>com.upcwangying.cloud.samples.data.process</groupId>
+    <groupId>com.ascrud.cloud.samples.data.process</groupId>
     <artifactId>data-process-batch</artifactId>
     <name>data-process-batch</name>
     <description>批处理</description>

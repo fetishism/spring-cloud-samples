@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>samples-parent</artifactId>
-        <groupId>com.upcwangying.cloud.samples</groupId>
+        <groupId>com.ascrud.cloud.samples</groupId>
         <version>0.2.0</version>
         <relativePath>..</relativePath>
     </parent>
@@ -14,7 +14,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.upcwangying.cloud.samples.user</groupId>
+            <groupId>com.ascrud.cloud.samples.user</groupId>
             <artifactId>user-client</artifactId>
         </dependency>
 
@@ -119,17 +119,17 @@
             <optional>true</optional>
         </dependency>
 
-        <dependency>
-            <groupId>com.upcwangying.cloud.see</groupId>
-            <artifactId>spring-cloud-starter-see-auth</artifactId>
-            <version>1.0.3</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.ascrud.cloud.see</groupId>-->
+<!--            <artifactId>spring-cloud-starter-see-auth</artifactId>-->
+<!--            <version>1.0.3</version>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <groupId>com.upcwangying.cloud.see</groupId>
-            <artifactId>spring-cloud-starter-see-swagger</artifactId>
-            <version>1.0.3</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.ascrud.cloud.see</groupId>-->
+<!--            <artifactId>spring-cloud-starter-see-swagger</artifactId>-->
+<!--            <version>1.0.3</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>net.devh</groupId>
@@ -148,7 +148,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.upcwangying.cloud.samples</groupId>
+            <groupId>com.ascrud.cloud.samples</groupId>
             <artifactId>samples-core</artifactId>
         </dependency>
     </dependencies>
@@ -195,7 +195,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.upcwangying.cloud.samples.zuul.SamplesZuulApplication</mainClass>
+                    <mainClass>com.ascrud.cloud.samples.zuul.SamplesZuulApplication</mainClass>
                 </configuration>
             </plugin>
 

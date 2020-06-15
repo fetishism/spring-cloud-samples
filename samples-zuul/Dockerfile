@@ -1,5 +1,5 @@
 FROM openjdk:8-alpine
-MAINTAINER Ying Wang upcwangying@126.com
+MAINTAINER Walkman  cacotopia@126.com
 ARG JAR_FILE
 ENV PROFILE default
 ADD target/${JAR_FILE} /opt/app.jar

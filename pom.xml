@@ -8,22 +8,17 @@
         <version>2.1.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.upcwangying.cloud.samples</groupId>
+    <groupId>com.ascrud.cloud.samples</groupId>
     <artifactId>samples-parent</artifactId>
     <version>0.2.0</version>
     <packaging>pom</packaging>
     <name>Samples::parent</name>
     <description>Spring Cloud Samples</description>
-    <url>https://cloud.upcwangying.com</url>
+    <url>https://cloud.ascrud.com</url>
 
     <modules>
         <module>samples-core</module>
         <module>samples-cache</module>
-        <module>samples-mdm</module>
-        <module>samples-oss</module>
-        <module>samples-user</module>
-        <module>samples-product</module>
-        <module>samples-order</module>
         <module>samples-bpm</module>
         <module>samples-admin</module>
         <module>samples-data-process</module>
@@ -31,6 +26,7 @@
         <module>samples-gateway</module>
         <module>samples-hystrix-dashboard</module>
         <module>samples-zuul</module>
+        <module>samples-modules</module>
     </modules>
 
     <properties>
@@ -42,14 +38,14 @@
         <spring-cloud-see.version>1.0.3</spring-cloud-see.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <dockerfile-maven.version>1.4.10</dockerfile-maven.version>
-        <docker.image.prefix>registry.cn-qingdao.aliyuncs.com/upcwangying</docker.image.prefix>
+        <docker.image.prefix>registry.cn-qingdao.aliyuncs.com/ascrud</docker.image.prefix>
         <maven.prefix>https://repo.rdc.aliyun.com/repository</maven.prefix>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.upcwangying.cloud.samples.user</groupId>
+                <groupId>com.ascrud.cloud.samples.user</groupId>
                 <artifactId>user-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -71,7 +67,7 @@
             </dependency>
 
             <dependency>
-                <groupId>com.upcwangying.cloud.samples</groupId>
+                <groupId>com.ascrud.cloud.samples</groupId>
                 <artifactId>samples-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -95,7 +91,7 @@
             </dependency>
 
             <dependency>
-                <groupId>com.upcwangying.cloud.see</groupId>
+                <groupId>com.ascrud.cloud.see</groupId>
                 <artifactId>spring-cloud-see-dependencies</artifactId>
                 <version>1.0.3</version>
             </dependency>
@@ -229,8 +225,8 @@
     <developers>
         <developer>
             <name>Ying Wang</name>
-            <email>upcwangying@gmail.com</email>
-            <url>https://github.com/upcwangying</url>
+            <email>ascrud@gmail.com</email>
+            <url>https://github.com/ascrud</url>
             <timezone>+8</timezone>
         </developer>
     </developers>
@@ -238,13 +234,13 @@
     <licenses>
         <license>
             <name>MIT License</name>
-            <url>https://raw.githubusercontent.com/upcwangying/spring-cloud-samples/master/LICENSE.md</url>
+            <url>https://raw.githubusercontent.com/ascrud/spring-cloud-samples/master/LICENSE.md</url>
         </license>
     </licenses>
 
     <scm>
-        <url>https://github.com/upcwangying/spring-cloud-samples</url>
-        <connection>https://github.com/upcwangying/spring-cloud-samples.git</connection>
+        <url>https://github.com/ascrud/spring-cloud-samples</url>
+        <connection>https://github.com/ascrud/spring-cloud-samples.git</connection>
     </scm>
 
     <!--    <repositories>-->
