@@ -10,14 +10,14 @@
     </parent>
     <artifactId>samples-admin</artifactId>
     <packaging>jar</packaging>
-    <name>Samples::admin</name>
+    <name>Samples::Admin</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-boot-admin.version>2.0.5</spring-boot-admin.version>
+        <spring-boot-admin.version>2.1.6</spring-boot-admin.version>
         <dockerfile-maven.version>1.4.10</dockerfile-maven.version>
-        <docker.image.prefix>registry.cn-qingdao.aliyuncs.com/ascrud</docker.image.prefix>
+        <docker.image.prefix>registry.cn-hangzhou.aliyuncs.com/ascrud</docker.image.prefix>
     </properties>
 
     <dependencies>

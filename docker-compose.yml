@@ -3,7 +3,7 @@ version: '3.3'
 services:
 
   admin:
-    image: registry.cn-qingdao.aliyuncs.com/ascrud/samples-admin:0.2.0
+    image: registry.cn-hangzhou.aliyuncs.com/ascrud/samples-admin:0.2.0
     restart: on-failure
     networks:
       - samples
@@ -13,9 +13,8 @@ services:
       JAVA_OPTS: '-server -Xmx1g'
       PROFILE: 'default'
       SERVER_PORT: 8080
-
   gateway:
-    image: registry.cn-qingdao.aliyuncs.com/ascrud/samples-gateway:0.2.0
+    image: registry.cn-hangzhou.aliyuncs.com/ascrud/samples-gateway:0.2.0
     restart: on-failure
     networks:
       - samples
@@ -30,9 +29,8 @@ services:
     depends_on:
       - eureka
       - user
-
   product:
-    image: registry.cn-qingdao.aliyuncs.com/ascrud/product-server:0.2.0
+    image: registry.cn-hangzhou.aliyuncs.com/ascrud/product-server:0.2.0
     restart: on-failure
     networks:
       - samples
@@ -49,9 +47,8 @@ services:
     depends_on:
       - eureka
       - admin
-
   order:
-    image: registry.cn-qingdao.aliyuncs.com/ascrud/order-server:0.2.0
+    image: registry.cn-hangzhou.aliyuncs.com/ascrud/order-server:0.2.0
     restart: on-failure
     networks:
       - samples
@@ -68,9 +65,7 @@ services:
     depends_on:
       - eureka
       - admin
-
 networks:
   samples:
-
 volumes:
   mydata:

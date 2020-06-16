@@ -11,26 +11,32 @@ dubbo:
       server: netty
   registry:
     #   The Spring Cloud Dubbo's registry extension
-    address: nacos://192.168.0.135:8848
 #    address: nacos://${NACOS_SERVER_ADDR:192.168.0.135:8848}
+    address: nacos://192.168.0.135:8848
   cloud:
     subscribed-services:
     #   The traditional Dubbo's registry
 #   address: zookeeper://127.0.0.1:2181
 
+server:
+  port: ${SERVER_PORT:9095}
+
 spring:
   application:
     name: user
+  profiles:
+    active: dev
   cloud:
+    nacos:
       discovery:
         server-addr: 192.168.0.135:8848
-        username: nacos
-        password: nacos
-        namespace: dev
-#        server-addr: ${NACOS_SERVER_ADDR:192.168.0.135:8848}
-#        username: ${NACOS_USERNAME:nacos}
-#        password: ${NACOS_PASSWORD:nacos}
-#        namespace: ${NACOS_DISCOVERY_NAMESPACE:dev}
+        namespace: ${NACOS_DISCOVERY_NAMESPACE:dev}
+        username: ${NACOS_USERNAME:nacos}
+        password: ${NACOS_PASSWORD:nacos}
+      #        server-addr: ${NACOS_SERVER_ADDR:192.168.0.135:8848}
+      #        username: ${NACOS_USERNAME:nacos}
+      #        password: ${NACOS_PASSWORD:nacos}
+      #        namespace: ${NACOS_DISCOVERY_NAMESPACE:dev}
   zipkin:
     anabled: false
     base-url: http://${ZIPKIN_HOST:192.168.88.87}:${ZIPKIN_PORT:9411}
@@ -75,7 +81,6 @@ spring:
       hibernate.cache.use_second_level_cache: false
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: false
-
 #  boot:
 #    admin:
 #      client:
@@ -100,9 +105,6 @@ spring:
 #  instance:
 #    metadata-map:
 #      host-mark: running-host
-
-server:
-  port: ${SERVER_PORT:9095}
 
 logging:
   level:

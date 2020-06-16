@@ -38,7 +38,7 @@
         <spring-cloud-see.version>1.0.3</spring-cloud-see.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <dockerfile-maven.version>1.4.10</dockerfile-maven.version>
-        <docker.image.prefix>registry.cn-qingdao.aliyuncs.com/ascrud</docker.image.prefix>
+        <docker.image.prefix>registry.cn-hangzhou.aliyuncs.com/ascrud</docker.image.prefix>
         <maven.prefix>https://repo.rdc.aliyun.com/repository</maven.prefix>
     </properties>
 

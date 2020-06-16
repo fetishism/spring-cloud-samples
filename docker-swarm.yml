@@ -1,9 +1,8 @@
 version: '3.3'
 
 services:
-
   eureka:
-    image: registry.cn-qingdao.aliyuncs.com/ascrud/samples-eureka:0.2.0
+    image: registry.cn-hangzhou.aliyuncs.com/ascrud/samples-eureka:0.2.0
     restart: on-failure
     networks:
       - samples
@@ -13,9 +12,8 @@ services:
       JAVA_OPTS: '-server -Xmx1g'
       PROFILE: 'default'
       SERVER_PORT: 8080
-
   admin:
-    image: registry.cn-qingdao.aliyuncs.com/ascrud/samples-admin:0.2.0
+    image: registry.cn-hangzhou.aliyuncs.com/ascrud/samples-admin:0.2.0
     restart: on-failure
     networks:
       - samples
@@ -25,9 +23,8 @@ services:
       JAVA_OPTS: '-server -Xmx1g'
       PROFILE: 'default'
       SERVER_PORT: 8080
-
   hystrix-dashboard:
-    image: registry.cn-qingdao.aliyuncs.com/ascrud/samples-hystrix-dashboard:0.2.0
+    image: registry.cn-hangzhou.aliyuncs.com/ascrud/samples-hystrix-dashboard:0.2.0
     restart: on-failure
     networks:
       - samples
@@ -39,9 +36,8 @@ services:
       SERVER_PORT: 8080
       EUREKA_SERVER_HOST: 'eureka'
       EUREKA_SERVER_PORT: 8080
-
   zuul:
-    image: registry.cn-qingdao.aliyuncs.com/ascrud/samples-zuul:0.2.0
+    image: registry.cn-hangzhou.aliyuncs.com/ascrud/samples-zuul:0.2.0
     restart: on-failure
     networks:
       - samples
@@ -56,9 +52,8 @@ services:
     depends_on:
       - eureka
       - user
-
   user:
-    image: registry.cn-qingdao.aliyuncs.com/ascrud/user-server:0.1.3-SNAPSHOT
+    image: registry.cn-hangzhou.aliyuncs.com/ascrud/user-server:0.1.3-SNAPSHOT
     restart: on-failure
     networks:
       - samples
@@ -75,9 +70,8 @@ services:
     depends_on:
       - eureka
       - admin
-
   product:
-    image: registry.cn-qingdao.aliyuncs.com/ascrud/product-server:0.1.3-SNAPSHOT
+    image: registry.cn-hangzhou.aliyuncs.com/ascrud/product-server:0.1.3-SNAPSHOT
     restart: on-failure
     networks:
       - samples
@@ -94,9 +88,8 @@ services:
     depends_on:
       - eureka
       - admin
-
   order:
-    image: registry.cn-qingdao.aliyuncs.com/ascrud/order-server:0.1.3-SNAPSHOT
+    image: registry.cn-hangzhou.aliyuncs.com/ascrud/order-server:0.1.3-SNAPSHOT
     restart: on-failure
     networks:
       - samples
