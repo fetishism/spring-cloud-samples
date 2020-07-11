@@ -5,7 +5,7 @@
     <parent>
         <artifactId>samples-modules</artifactId>
         <groupId>com.ascrud.cloud.samples</groupId>
-        <version>0.2.0</version>
+        <version>0.2.0-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
     <artifactId>samples-order</artifactId>
@@ -50,6 +50,13 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
                 <groupId>com.ascrud.cloud.samples</groupId>
                 <artifactId>samples-core</artifactId>
                 <version>${project.version}</version>
@@ -73,13 +80,6 @@
                 <groupId>com.ascrud.cloud.samples.product</groupId>
                 <artifactId>product-dubbo</artifactId>
                 <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${spring-cloud-alibaba.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>com.spring4all</groupId>

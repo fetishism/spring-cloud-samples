@@ -1,6 +1,6 @@
 dubbo:
   scan:
-    base-packages: com.upcwangying.cloud.samples.product
+    base-packages: com.ascrud.cloud.samples.product
   application:
     name: ${spring.application.name}-dubbo-provider
   protocols:

@@ -10,9 +10,9 @@
     </parent>
     <groupId>com.ascrud.cloud.samples</groupId>
     <artifactId>samples-parent</artifactId>
-    <version>0.2.0</version>
+    <version>0.2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Samples::parent</name>
+    <name>Samples::Parent</name>
     <description>Spring Cloud Samples</description>
     <url>https://cloud.ascrud.com</url>
 
@@ -32,14 +32,23 @@
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.SR6</spring-cloud.version>
+        <spring-cloud.version>Greenwich.SR6</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
         <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
         <spring-cloud-zuul-ratelimit-version>2.2.3.RELEASE</spring-cloud-zuul-ratelimit-version>
         <ribbon-discovery-filter.version>2.1.0</ribbon-discovery-filter.version>
         <spring-cloud-see.version>1.0.3</spring-cloud-see.version>
         <commons-collections.version>3.2.2</commons-collections.version>
-        <dockerfile-maven.version>1.4.10</dockerfile-maven.version>
-        <docker.image.prefix>registry.cn-hangzhou.aliyuncs.com/ascrud</docker.image.prefix>
         <maven.prefix>https://repo.rdc.aliyun.com/repository</maven.prefix>
+        <spring-cloud.version>Greenwich.SR6</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
+        <spring-boot-admin.version>2.0.5</spring-boot-admin.version>
+        <swagger-spring.version>1.9.0.RELEASE</swagger-spring.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
+        <grpc.version>1.29.0</grpc.version><!-- CURRENT_GRPC_VERSION -->
+        <grpc-spring-boot-starter.version>3.2.2</grpc-spring-boot-starter.version>
+        <dockerfile-maven.version>1.4.10</dockerfile-maven.version>
+        <docker.image.prefix>registry.cn-qingdao.aliyuncs.com/ascrud</docker.image.prefix>
     </properties>
 
     <dependencyManagement>

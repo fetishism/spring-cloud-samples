@@ -105,7 +105,7 @@ ribbon:
 logging:
   level:
     org.springframework.cloud.openfeign: debug
-    com.upcwangying.cloud.samples.order.server.service.impl: debug
+    com.ascrud.cloud.samples.order.server.service.impl: debug
 management:
   endpoints:
     web:

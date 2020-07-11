@@ -11,7 +11,7 @@ dubbo:
       server: netty
   registry:
     #   The Spring Cloud Dubbo's registry extension
-#    address: nacos://${NACOS_SERVER_ADDR:192.168.0.135:8848}
+    #    address: nacos://${NACOS_SERVER_ADDR:192.168.0.135:8848}
     address: nacos://192.168.0.135:8848
   cloud:
     subscribed-services:
@@ -54,8 +54,8 @@ spring:
     url: jdbc:mysql://192.168.0.135:3306/sam_user?characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
     password: yhl1qaz2wsx
-#    username: ${MYSQL_USERNAME:root}
-#    password: ${MYSQL_PASSWORD:yhl1qaz2wsx}
+    #    username: ${MYSQL_USERNAME:root}
+    #    password: ${MYSQL_PASSWORD:yhl1qaz2wsx}
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -81,12 +81,12 @@ spring:
       hibernate.cache.use_second_level_cache: false
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: false
-#  boot:
-#    admin:
-#      client:
-#        url: http://${ADMIN_HOST:127.0.0.1}:${ADMIN_PORT:9093}
-#        username: ${ADMIN_USERNAME:admin}
-#        password: ${ADMIN_PASSWORD:admin}
+  #  boot:
+  #    admin:
+  #      client:
+  #        url: http://${ADMIN_HOST:127.0.0.1}:${ADMIN_PORT:9093}
+  #        username: ${ADMIN_USERNAME:admin}
+  #        password: ${ADMIN_PASSWORD:admin}
   # 在 Spring Boot 中, 当用户访问了一个不存在的链接时, Spring 默认会将页面重定向到 **/error** 上, 而不会抛出异常.
   # 既然如此, 那我们就告诉 Spring Boot, 当出现 404 错误时, 抛出一个异常即可. 在 application.properties 中添加两个配置:
   mvc:
